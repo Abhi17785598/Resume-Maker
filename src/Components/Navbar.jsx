@@ -1,6 +1,6 @@
 // src/components/Navbar.jsx
 import React from 'react';
-
+import { Link } from 'react-router-dom';
 const Navbar = () => {
   return (
     <nav className="flex items-center justify-between px-6 lg:px-20 py-4 shadow-sm bg-white">
@@ -11,7 +11,10 @@ const Navbar = () => {
 
       <ul className="hidden md:flex items-center gap-6 text-lg font-medium text-gray-600">
         <li className="hover:text-blue-600 font-semibold">Home</li>
-        <li className='hover:text-blue-600'>Templates</li>
+
+        <li>
+          <Link to="/templates" className="hover:text-blue-600">Templates</Link>
+        </li>
         <li className=" hover:text-blue-600 relative group cursor-pointer">
           Resources
           <span className="ml-1">&#x25BC;</span>
